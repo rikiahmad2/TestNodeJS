@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "be559682-7850-4076-9ecd-6d77e0501554",
+		"name": "NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test coding\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmlraSIsImlhdCI6MTY0MzE2ODQ2OH0.w_uSbTESsQKIq8ddCrS3SXt9FlV1f9l5F6zbCsAvfD8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\" : {\r\n        \"username\" : \"test coding\",\r\n        \"email\" : \"rikiahmad2@gmail.com\",\r\n        \"encrypted_password\" : \"123456\",\r\n        \"phone\" : \"087812312\",\r\n        \"address\" : \"Bandung Barat\",\r\n        \"city\" : \"Bandung\",\r\n        \"country\" : \"indonesia\",\r\n        \"name\" : \"postman\",\r\n        \"postcode\" : \"12324\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QgY29kaW5nIiwiZW1haWwiOiJyaWtpYWhtYWQyQGdtYWlsLmNvbSIsInBob25lIjoiMDg3ODEyMzEyIiwiYWRkcmVzcyI6IkJhbmR1bmcgQmFyYXQiLCJjaXR5IjoiQmFuZHVuZyIsImNvdW50cnkiOiJpbmRvbmVzaWEiLCJuYW1lIjoicG9zdG1hbiIsInBvc3Rjb2RlIjoiMTIzMjQiLCJwYXNzd29yZCI6IiQyYiQxMCQ5YzJzczhtck9tSHl5TUIwNmd5aTd1ZVdjT0Vkdkk2cnUxRm4xVS9TWHIwc0Fpa0N6NTlqMiIsImlhdCI6MTY0MzE4NTE2NH0.k_xPWrbCrrfI-VvFwKtegZBEc2jjbAnMqHMWmNlIx3I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Shopping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.dGVzdCBjb2Rpbmc.bvL8AWRHLryc3kTaw0Af4LkAe-s4mGEREKWccf47Z7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shopping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shopping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.dGVzdCBjb2Rpbmc.bvL8AWRHLryc3kTaw0Af4LkAe-s4mGEREKWccf47Z7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shopping\" : {\r\n        \"name\" : \"Buku\",\r\n        \"createddate\" : \"2022-01-26\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createshopping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createshopping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.dGVzdCBjb2Rpbmc.bvL8AWRHLryc3kTaw0Af4LkAe-s4mGEREKWccf47Z7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shopping/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopping",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Shopping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.dGVzdCBjb2Rpbmc.bvL8AWRHLryc3kTaw0Af4LkAe-s4mGEREKWccf47Z7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shopping/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopping",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Shopping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.dGVzdCBjb2Rpbmc.bvL8AWRHLryc3kTaw0Af4LkAe-s4mGEREKWccf47Z7c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shopping\" : {\r\n        \"name\" : \"Kembang\",\r\n        \"createddate\" : \"2022-01-26\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shopping/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shopping",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
